@@ -9,7 +9,7 @@ PHRASES ={
     "class %%%(%%%):":
         "Make a class named %%% that is-a %%%.",
     "class %%%(object):\n\tdef __init__(self,***)":
-        "class %%% has-a __init__ that takes self and ** params.",
+        "class %%% has-a __init__ that takes self and *** params.",
     "class %%%(object):\n\tdef ***(self,@@@)":
         "class %%% has-a function *** that takes self and @@@ params.",
     "*** = %%%()":
@@ -27,7 +27,7 @@ else:
     PHRASES_FIRST = False
 
 #load up the words from the website
-for word in urlopen(WORD_URL).readline():
+for word in urlopen(WORD_URL).readlines():
     WORDS.append(str(word.strip(),encoding="utf-8"))
 
 
@@ -48,7 +48,7 @@ def convert(snippet,phrases):
     
         #fake class names
         for word in class_names:
-        result = result.replace("@@@",word,1)
+            result = result.replace("@@@",word,1)
     
         #fake other names
         for word in other_names:
