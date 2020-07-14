@@ -6,8 +6,15 @@
         {
             "label": "pytohn3",
             "type": "shell",
-            "command": "D:\\Program Files\\Python36\\python.exe",
-            "args": ["${file}"]
+            "command": "D:\\Program Files\\Python\\Python36\\python.exe",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
